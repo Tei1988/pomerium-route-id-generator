@@ -11,6 +11,8 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+var version = "0.0.1"
+
 // OutputFormat represents the supported output formats for the CLI tool.
 type OutputFormat string
 
@@ -32,7 +34,13 @@ func main() {
 	configPath := flag.String("config", "", "Path to Pomerium configuration file")
 	outputFormat := flag.String("output", "text", "Output format (text|json)")
 	flag.StringVar(outputFormat, "o", "text", "Output format (text|json) (shorthand)")
+	showVersion := flag.Bool("version", false, "Show version and exit")
 	flag.Parse()
+
+	if *showVersion {
+		fmt.Println(version)
+		return
+	}
 
 	if *configPath == "" {
 		fmt.Fprintln(os.Stderr, "Error: --config flag is required")

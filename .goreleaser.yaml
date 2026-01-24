@@ -1,0 +1,54 @@
+# This is a GoReleaser configuration file.
+# See https://goreleaser.com for documentation.
+
+version: 2
+
+project_name: pomerium-route-id-gen
+
+before:
+  hooks:
+    - go mod tidy && git diff --exit-code go.mod go.sum
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+      - riscv64
+    ignore:
+      - goos: windows
+        goarch: arm64
+      - goos: windows
+        goarch: riscv64
+      - goos: darwin
+        goarch: amd64
+      - goos: darwin
+        goarch: riscv64
+    main: ./cmd/pomerium-route-id-gen
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+
+archives:
+  - format: tar.gz
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
+
+checksum:
+  name_template: 'checksums.txt'
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'

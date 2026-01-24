@@ -78,4 +78,10 @@ routes:
 		assert.Contains(t, string(out), "From: https://route.example.com")
 		assert.Contains(t, string(out), "---")
 	})
+
+	t.Run("version flag", func(t *testing.T) {
+		out, err := exec.Command("./pomerium-route-id-gen", "--version").Output()
+		assert.NoError(t, err)
+		assert.Equal(t, "0.0.1\n", string(out))
+	})
 }
