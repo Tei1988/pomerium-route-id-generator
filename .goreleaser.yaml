@@ -7,7 +7,7 @@ project_name: pomerium-route-id-gen
 
 before:
   hooks:
-    - go mod tidy
+    - go mod tidy && git diff --exit-code go.mod go.sum
 
 builds:
   - env:
