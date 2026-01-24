@@ -11,18 +11,23 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+// OutputFormat represents the supported output formats for the CLI tool.
 type OutputFormat string
 
 const (
+	// OutputFormatText represents plain text output format.
 	OutputFormatText OutputFormat = "text"
+	// OutputFormatJSON represents JSON output format.
 	OutputFormatJSON OutputFormat = "json"
 )
 
+// RouteInfo contains the calculated RouteID and the source 'from' URL for a route.
 type RouteInfo struct {
 	RouteID string `json:"route_id"`
 	From    string `json:"from"`
 }
 
+// main is the entry point for the pomerium-route-id-gen CLI tool.
 func main() {
 	configPath := flag.String("config", "", "Path to Pomerium configuration file")
 	outputFormat := flag.String("output", "text", "Output format (text|json)")
@@ -98,6 +103,7 @@ func main() {
 	}
 }
 
+// printText prints the route information in a human-readable text format to stdout.
 func printText(results []RouteInfo) {
 	for i, res := range results {
 		if i > 0 {
@@ -108,6 +114,7 @@ func printText(results []RouteInfo) {
 	}
 }
 
+// printJSON prints the route information in a formatted JSON array to stdout.
 func printJSON(results []RouteInfo) {
 	encoder := json.NewEncoder(os.Stdout)
 	encoder.SetIndent("", "  ")

@@ -9,6 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// TestCLI runs integration tests for the pomerium-route-id-gen CLI tool.
 func TestCLI(t *testing.T) {
 	// Build binary
 	cmd := exec.Command("go", "build", "-o", "pomerium-route-id-gen", "./cmd/pomerium-route-id-gen")
