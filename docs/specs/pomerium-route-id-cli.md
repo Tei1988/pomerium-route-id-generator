@@ -19,7 +19,7 @@ route_id の計算は、Pomerium内部の pkg/config/policy.go に実装され�
    - Response の場合: ステータスコードとボディ内容を書き込む。
 
 ## CLI インターフェース仕様
-- コマンド名: pomerium-id-gen (仮)
+- コマンド名: pomerium-route-id-gen
 - 必須フラグ:
   - --config <path>: Pomeriumの構成ファイル（YAML/JSON）を指定する。
 - オプションフラグ:
@@ -39,11 +39,11 @@ route_id の計算は、Pomerium内部の pkg/config/policy.go に実装され�
    ```json
    [
      {
-       "routeId": "<route-id>",
+       "route_id": "<route-id>",
        "from": "<from>"
      },
      {
-       "routeId": "<route-id>",
+       "route_id": "<route-id>",
        "from": "<from>"
      }
    ]
