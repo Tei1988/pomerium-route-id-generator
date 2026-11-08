@@ -1,8 +1,6 @@
 module pomerium-route-id-gen
 
-go 1.24.6
-
-toolchain go1.24.12
+go 1.25.0
 
 require (
 	github.com/mitchellh/mapstructure v1.5.1-0.20231216201459-8508981c8b6c
@@ -12,7 +10,7 @@ require (
 )
 
 require (
-	cel.dev/expr v0.24.0 // indirect
+	cel.dev/expr v0.25.1 // indirect
 	contrib.go.opencensus.io/exporter/prometheus v0.4.2 // indirect
 	filippo.io/bigmod v0.0.3 // indirect
 	filippo.io/csrf v0.2.1 // indirect
@@ -24,17 +22,17 @@ require (
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/cloudflare/circl v1.6.1 // indirect
-	github.com/cncf/xds/go v0.0.0-20250501225837-2ac532fd4443 // indirect
+	github.com/cloudflare/circl v1.6.3 // indirect
+	github.com/cncf/xds/go v0.0.0-20251210132809-ee656c7534f5 // indirect
 	github.com/coreos/go-oidc/v3 v3.15.0 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
-	github.com/envoyproxy/go-control-plane/envoy v1.35.0 // indirect
-	github.com/envoyproxy/protoc-gen-validate v1.2.1 // indirect
+	github.com/envoyproxy/go-control-plane/envoy v1.36.0 // indirect
+	github.com/envoyproxy/protoc-gen-validate v1.3.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
 	github.com/gaissmai/bart v0.25.0 // indirect
-	github.com/go-jose/go-jose/v3 v3.0.4 // indirect
-	github.com/go-jose/go-jose/v4 v4.1.1 // indirect
+	github.com/go-jose/go-jose/v3 v3.0.5 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.6 // indirect
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
@@ -46,7 +44,7 @@ require (
 	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/grafana/regexp v0.0.0-20240518133315-a468a5bfb3bc // indirect
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79 // indirect
-	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.2 // indirect
+	github.com/grpc-ecosystem/grpc-gateway/v2 v2.28.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-set/v3 v3.0.1 // indirect
@@ -90,40 +88,40 @@ require (
 	github.com/zeebo/blake3 v0.2.4 // indirect
 	github.com/zeebo/xxh3 v1.0.2 // indirect
 	go.opencensus.io v0.24.0 // indirect
-	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
+	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.63.0 // indirect
 	go.opentelemetry.io/contrib/propagators/autoprop v0.63.0 // indirect
 	go.opentelemetry.io/contrib/propagators/aws v1.38.0 // indirect
 	go.opentelemetry.io/contrib/propagators/b3 v1.38.0 // indirect
 	go.opentelemetry.io/contrib/propagators/jaeger v1.38.0 // indirect
 	go.opentelemetry.io/contrib/propagators/ot v1.38.0 // indirect
-	go.opentelemetry.io/otel v1.38.0 // indirect
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.38.0 // indirect
+	go.opentelemetry.io/otel v1.43.0 // indirect
+	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.43.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.38.0 // indirect
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.38.0 // indirect
+	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.43.0 // indirect
 	go.opentelemetry.io/otel/exporters/prometheus v0.60.0 // indirect
-	go.opentelemetry.io/otel/metric v1.38.0 // indirect
-	go.opentelemetry.io/otel/sdk v1.38.0 // indirect
-	go.opentelemetry.io/otel/sdk/metric v1.38.0 // indirect
-	go.opentelemetry.io/otel/trace v1.38.0 // indirect
-	go.opentelemetry.io/proto/otlp v1.8.0 // indirect
+	go.opentelemetry.io/otel/metric v1.43.0 // indirect
+	go.opentelemetry.io/otel/sdk v1.43.0 // indirect
+	go.opentelemetry.io/otel/sdk/metric v1.43.0 // indirect
+	go.opentelemetry.io/otel/trace v1.43.0 // indirect
+	go.opentelemetry.io/proto/otlp v1.10.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	go.uber.org/zap/exp v0.3.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
-	golang.org/x/crypto v0.45.0 // indirect
-	golang.org/x/mod v0.29.0 // indirect
-	golang.org/x/net v0.47.0 // indirect
-	golang.org/x/oauth2 v0.31.0 // indirect
-	golang.org/x/sync v0.18.0 // indirect
-	golang.org/x/sys v0.38.0 // indirect
-	golang.org/x/text v0.31.0 // indirect
-	golang.org/x/tools v0.38.0 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20250825161204-c5933d9347a5 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20250929231259-57b25ae835d4 // indirect
-	google.golang.org/grpc v1.75.1 // indirect
-	google.golang.org/protobuf v1.36.9 // indirect
+	golang.org/x/crypto v0.49.0 // indirect
+	golang.org/x/mod v0.33.0 // indirect
+	golang.org/x/net v0.52.0 // indirect
+	golang.org/x/oauth2 v0.35.0 // indirect
+	golang.org/x/sync v0.20.0 // indirect
+	golang.org/x/sys v0.42.0 // indirect
+	golang.org/x/text v0.35.0 // indirect
+	golang.org/x/tools v0.42.0 // indirect
+	google.golang.org/genproto/googleapis/api v0.0.0-20260401024825-9d38bb4040a9 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260401024825-9d38bb4040a9 // indirect
+	google.golang.org/grpc v1.80.0 // indirect
+	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
